@@ -9,8 +9,6 @@ import PortfolioSection from "@/components/sections/portfolio-section";
 import ContactSection from "@/components/sections/contact-section";
 import CTASection from "@/components/sections/cta-section";
 import { createMetadata } from "@/lib/metadata";
-import ProtectedEmail from "@/components/protected-email";
-import { encryptEmail } from "@/lib/encrypt-email";
 
 export const metadata = createMetadata({ title: "Главная" });
 
@@ -51,16 +49,10 @@ export default function Home() {
                 <Button href="#portfolio">Портфолио</Button>
                 <Link
                   href="#contacts"
-                  className="inline-flex items-center justify-center rounded-2xl border border-surface px-6 py-4 font-medium text-primary transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
-                >
-                  Контакты
-                </Link>
-                <ProtectedEmail
-                  encryptedEmail={encryptEmail("tamogoghi@gmail.com")}
                   className="inline-flex items-center justify-center rounded-2xl bg-accent px-6 py-4 font-medium text-white transition-all duration-200 hover:scale-[1.02] hover:shadow-(--accent-glow) active:scale-[0.98]"
-                  label="Связаться"
-                  revealLabel="Показать email для связи"
-                />
+                >
+                  Связаться
+                </Link>
               </div>
             </FadeIn>
           </div>

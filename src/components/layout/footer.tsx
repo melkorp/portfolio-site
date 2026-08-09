@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import ProtectedEmail from "@/components/protected-email";
-import { encryptEmail } from "@/lib/encrypt-email";
 
 export default function Footer() {
   const [currentYear, setCurrentYear] = useState(2026);
@@ -48,14 +46,14 @@ export default function Footer() {
             </Link>
           </nav>
 
-          {/* Правая колонка — контакты (вертикально) */}
+          {/* Правая колонка — GitHub */}
           <div className="flex flex-col items-center md:items-end gap-2">
-            <ProtectedEmail
-              encryptedEmail={encryptEmail("tamogoghi@gmail.com")}
+            <Link
+              href="#contacts"
               className="text-sm text-slate-400 hover:text-primary transition-colors"
-              label="Написать"
-              revealLabel="Показать email"
-            />
+            >
+              Написать
+            </Link>
             <a
               href="https://github.com/melkorp"
               target="_blank"

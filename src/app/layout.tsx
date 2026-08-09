@@ -40,7 +40,7 @@ export default function RootLayout({
       <head>
         <meta
           httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; img-src 'self' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-hashes'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; connect-src 'self' https://formspree.io https://*.formspree.io https://fonts.googleapis.com https://fonts.gstatic.com; form-action 'self' https://formspree.io https://*.formspree.io; base-uri 'self'; object-src 'none';"
+          content="default-src 'self'; img-src 'self' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' 'unsafe-hashes'; style-src-elem 'self' 'unsafe-inline' 'unsafe-hashes'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; connect-src 'self' https://formspree.io https://*.formspree.io https://fonts.googleapis.com https://fonts.gstatic.com; form-action 'self' https://formspree.io https://*.formspree.io; base-uri 'self'; object-src 'none';"
         />
         {/* JSON-LD вынесены inline, чтобы гарантированно работать в статическом export и не ломать рендер */}
         <script
